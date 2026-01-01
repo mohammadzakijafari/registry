@@ -2,8 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Root from "./pages/Root";
 import SearchPage from "./pages/search/SearchPage";
 import HomePage from "./pages/HomePage";
-import DetailsPage from "./pages/DetailsPage";
+import DetailsPage from "./pages/details/DetailsPage";
 import { searchLoader } from "./pages/search/searchLoader";
+import { detailsLoader } from "./pages/details/detailsLoader";
 
 function App() {
 
@@ -23,10 +24,11 @@ function App() {
         },
         {
           path: '/packages/:name',
-          element: <DetailsPage />
-        }
-      ]
-    }
+          element: <DetailsPage />,
+          loader: detailsLoader,
+        },
+      ],
+    },
   ]);
   return (
     <RouterProvider router={router} />

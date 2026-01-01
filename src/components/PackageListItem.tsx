@@ -16,7 +16,7 @@ const PackageListItem = ({ pack }: PackageListItemProps) => {
     return (
         <div className='border flex justify-between items-center rounded p-4'>
             <div className='flex flex-col gap-2'>
-                <Link to={`packages/${pack.name}`} className='text-xl font-bold'>
+                <Link to={`/packages/${pack.name}`} className='text-xl font-bold'>
                     {pack.name}
                 </Link>
                 <p className='text-sm text-gray-500'>
@@ -27,7 +27,7 @@ const PackageListItem = ({ pack }: PackageListItemProps) => {
                 </div>
             </div>
             <div className='mr-6'>
-                <Link to={`packages/${pack.name}`} className='py-2 px-3 rounded bg-black text-white text-lg'> View </Link>
+                <Link to={`/packages/${pack.name}`} className='py-2 px-3 rounded bg-black text-white text-lg'> View </Link>
             </div>
         </div>
     )
